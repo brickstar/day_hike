@@ -1,10 +1,4 @@
 require 'rails_helper'
-=begin
-As a visitor,
-when I visit the hiking trips index page,
-I see a list of all hiking trip names in
-the database.
-=end
 
 describe 'user visits trips index' do
   before(:each) do
@@ -26,7 +20,6 @@ describe 'user visits trips index' do
     end
 
     expect(current_path).to eq(trip_path(@trip1))
-    save_and_open_page
     expect(page).to have_content("Unique page for: #{@trip1.name}")
   end
 end
