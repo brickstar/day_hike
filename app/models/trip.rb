@@ -9,4 +9,12 @@ class Trip < ApplicationRecord
   def average_hiking_distance
     trails.average(:length)
   end
+
+  def shortest_hiking_distance
+    trails.minimum(:length)
+  end
+
+  def longest_hiking_distance
+    trails.maximum(:length)
+  end
 end

@@ -21,7 +21,24 @@ describe 'user visits trips show' do
     visit trip_path(@trip)
 
     expect(page).to have_content("Total hiking distance: #{@trip.total_hiking_distance}")
+  end
 
+  it 'should see average hiking distance of trails' do
+    visit trip_path(@trip)
+
+    expect(page).to have_content("Average hiking distance: #{@trip.average_hiking_distance}")
+  end
+
+  it 'should see shortest hiking distance of trails' do
+    visit trip_path(@trip)
+
+    expect(page).to have_content("Shortest hiking distance: #{@trip.shortest_hiking_distance}")
+  end
+
+  it 'should see longest hiking distance of trails' do
+    visit trip_path(@trip)
+
+    expect(page).to have_content("Longest hiking distance: #{@trip.longest_hiking_distance}")
   end
 
 end
