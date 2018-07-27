@@ -12,5 +12,8 @@ describe Trip, type: :model do
     it '.total_hiking_distance' do
       expect(@trip.total_hiking_distance).to eq(4)
     end
+    it '.average_hiking_distance' do
+      expect(@trip.average_hiking_distance).to eq(2)
+    end
   end
 end
