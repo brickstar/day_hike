@@ -1,6 +1,8 @@
 <h1>Unique page for: <%= @trip.name %></h1>
 <% @trip.trails.each do |trail| %>
-  <%= trail.name %>
+<div id="trail-<%= trail.name %>">
+  <%= link_to trail.name, trail_path(trail) %>
+</div>
   <%= trail.address %>
   <%= trail.length %>
 <% end %>

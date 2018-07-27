@@ -41,4 +41,14 @@ describe 'user visits trips show' do
     expect(page).to have_content("Longest hiking distance: #{@trip.longest_hiking_distance}")
   end
 
+  it 'should link to trail show from trail name' do
+    visit trip_path(@trip)
+
+    within("#trail-#{@trail1.id}") do
+      click_on("#{@trail1.name}")
+    end
+
+    expect(current_path).to eq(trail_path(@trail1))
+    expect(page).to have_content("Unique page for: #{@trail1.name}")
+  end
 end
