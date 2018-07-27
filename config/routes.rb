@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :trips, only: [:index]
+  resources :trips, only: [:index, :show]
 end
