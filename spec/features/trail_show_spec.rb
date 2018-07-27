@@ -27,7 +27,7 @@ describe 'user visits trips show' do
 
   it 'should see total number of trips that include trail' do
     visit trail_path(@trail)
-
+save_and_open_page
     expect(page).to have_content("Total number of hiking trips that include this trail: #{@trail.trips.length}")
   end
 end

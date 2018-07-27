@@ -1,10 +1,10 @@
 <h1>Unique page for: <%= @trail.name %></h1>
 <% @trail.trips.each do |trip| %>
-<%= trip.name %>
-Total trip length: <%= trip.total_hiking_distance %>
-<% trip.trails.each do |trail| %>
-Trail name: <%= trail.name %>
-Trail address: <%= trail.address %>
-<% end %>
+  <h2>Trip name: <%= trip.name %></br></h2>
+  <h4>Total trip length: <%= trip.total_hiking_distance %></h4>
+  <% trip.trails.each do |trail| %>
+    Trail name: <%= trail.name %></br>
+    Trail address: <%= trail.address %></br></br>
+  <% end %>
 <% end %>
 <h3>Total number of hiking trips that include this trail: <%= @trail.trips.length %></h3>
