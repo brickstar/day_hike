@@ -1,1 +1,6 @@
 <h1>Unique page for: <%= @trip.name %></h1>
+<% @trip.trails.each do |trail| %>
+  <%= trail.name %>
+  <%= trail.address %>
+  <%= trail.length %>
+<% end %>
