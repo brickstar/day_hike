@@ -1,1 +1,9 @@
 <h1>Unique page for: <%= @trail.name %></h1>
+<% @trail.trips.each do |trip| %>
+<%= trip.name %>
+Total trip length: <%= trip.total_hiking_distance %>
+<% trip.trails.each do |trail| %>
+Trail name: <%= trail.name %>
+Trail address: <%= trail.address %>
+<% end %>
+<% end %>
